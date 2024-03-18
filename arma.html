@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4530442e9b.js" crossorigin="anonymous"></script>
+    <title>Compra</title>
+    <style>
+img {
+    height: 200px;
+    max-width: 80%;
+    height: auto;
+    margin-left: 20px;
+}
+
+
+#imagem-do-produto {
+    transition: all .3s;
+
+}
+
+.boder1:hover #imagem-do-produto {
+    transform: scale(1.1);
+}
+
+#nome-do-produto {
+    transition: all .3s;
+}
+
+.boder1:hover #nome-do-produto {
+    text-decoration: underline;
+}
+
+.boder1 {
+    border: 3px solid;
+    padding: 10px;
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 5%;
+    margin-right: 2%;
+    display: inline-block;
+    vertical-align: top;
+    width: 15%;
+    transition: all .1s;
+    border-radius: 10px;
+}
+
+.boder1:hover  {
+    border-color: rgb(6, 211, 6);
+    transform: scale(1.05);
+}
+
+.boder1:hover #btn {
+    transform: scale(1.1);
+    color: white;
+}
+
+.boder1:hover hr {
+    transition: all .3s;
+    transform: scale(1.05);
+    color: green;
+   border: 1px solid;
+}
+
+#carComp {
+    color: black;
+}
+
+.boder1:hover #carComp{
+    transition: all .3s;
+    color: white;
+}
+
+#btn {
+    margin-left: 44px;
+    height: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(3, 179, 3);
+    color: black;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+
+.boder1:hover #preco {
+    transform: scale(1.1);
+    transition: all .3s;
+}
+
+#preco {
+    margin-left: 20%;
+    margin-top: 20px;
+    font-size: 20px;
+    color:green;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+
+    </style>
+</head>
+<body>
+    <br><br>
+    <div class="boder1">
+		<img src="img/doz2.png" id="imagem-do-produto" alt="">
+		<p id="nome-do-produto">ESPINGARDA CBC MILITARY 3.0 RT CAL 12 - 16"</p>
+		<p id="preco">R$ 9.310,00</p>
+		<hr>
+		<br>
+		<button id="btn" onclick="comprar()"><i class="fa-solid fa-cart-shopping" id="carComp"></i>Comprar</button>
+	</div>
+
+
+    <script defer>
+        var btnComprar = document.getElementById('btn');
+
+        btnComprar.addEventListener('click', function() {
+            var urlCompra = 'http://localhost/exemplo/';
+            window.location.href = urlCompra;
+        })
+    </script>
+</body>
+</html>
